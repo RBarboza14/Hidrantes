@@ -7,7 +7,6 @@
         <div id="scale" class="mb-4"></div>
       </div>
     </div>
-
     
     <div class="container">
         <div class="row align-items-center justify-content-center">
