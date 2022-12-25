@@ -54,7 +54,11 @@ class Hidrantes_model extends CI_Model {
         //else{
         //    return $this->db->query("select hidrantes_modificar($in_id, '$in_nombre', $in_calle, $in_avenida, $in_caudal, '$in_localizacion');");
         //}
-        return $this->db->query("select hidrantes_modificar($in_id, '$in_nombre', $in_calle, $in_avenida, $in_caudal);");
+        mysqli_next_result($this->db->conn_id);        
+        return $this->db->query("call hidrantes_modificar($in_id, '$in_nombre', $in_calle, $in_avenida, $in_caudal);");
+        $this->db->mysqli_next_result($this->db->conn_id);
+        $this->db->query->free_result();
+
     }
     public function get_hidrantes_nombre($nombre){
 

@@ -47,7 +47,7 @@
               </div>
               <div class="form-group localizacion" style="display:block !important;">
                 <label for="bombero">Dirijase al mapa y haga click sobre la ubicacion del nuevo hidrante para copiarla</label>
-                <input type="text" class="form-control pb_height-50 reverse" placeholder="Localizacion" name="localizacion" value="<?php echo $hidrantes[0]['geom'] ?>" readonly>
+                <input type="text" class="form-control pb_height-50 reverse" placeholder="Localizacion" name="localizacion" value="<?php #echo $hidrantes[0]['geom'] ?>" readonly>
               </div> -->
               <div class="form-group">
                 <input type="submit" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue" value="Enviar">

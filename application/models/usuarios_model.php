@@ -68,7 +68,11 @@ class Usuarios_model extends CI_Model {
         $in_apellido_2 = $this->input->post('apellido_2');
         $in_telefono = $this->input->post('telefono');
         $in_tipo = $this->input->post('tipo');
+        //return $this->db->query("call usuario_modificar($in_cedula, '$in_nombre', '$in_apellido_1', '$in_apellido_2', $in_telefono, $in_tipo);");
+        mysqli_next_result($this->db->conn_id);        
         return $this->db->query("call usuario_modificar($in_cedula, '$in_nombre', '$in_apellido_1', '$in_apellido_2', $in_telefono, $in_tipo);");
+        $this->db->mysqli_next_result($this->db->conn_id);
+        $this->db->query->free_result();
 
         
     }

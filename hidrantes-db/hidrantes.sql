@@ -30,6 +30,15 @@ END;
 // DELIMITER ;
 
 DELIMITER //
+CREATE PROCEDURE hidrantes_obtener_nombre (in_nombre varchar(30))
+BEGIN
+  SELECT h.id, h.nombre, h.calle, h.avenida, h.caudal 
+  FROM hidrantes h;
+  WHERE h.nombre = in_nombre;
+END;
+// DELIMITER ;
+
+DELIMITER //
 CREATE PROCEDURE hidrantes_obtener_id (in_id int)
 BEGIN
   SELECT h.id, h.nombre, h.calle, h.avenida, h.caudal 
